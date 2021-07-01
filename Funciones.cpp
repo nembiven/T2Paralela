@@ -77,7 +77,7 @@ int esbisiesto(int anio) {
 int dias (string fecha1, string fecha2)
 {
     int an1=0,an2=0,me1=0,me2=0,di1=0,di2=0;
-
+  //Separando fechas desde string a int
     an1+=atoi(fecha1.substr(0,4).c_str());
     an2+=atoi(fecha2.substr(0,4).c_str());
 
@@ -174,6 +174,7 @@ int contarfechas(Ventas A[])
 
 void depurar(Ventas A[], Ventas B[])
 {
+	//Funcion para acortar las 300k entradas acumulando las ventas por dia
     string aux=A[0].getfecha();
     B[0].setfecha(aux);
     int cont=0,acumulado=0;
@@ -196,7 +197,7 @@ void depurar(Ventas A[], Ventas B[])
     }
     B[cont].setamount(acumulado);
 }
-void perodiar(Ventas A[],int n)
+void perodiar(Ventas A[],int n)// Funcion que transforma las fechas en periodos para trabajar los datos
 {
     for(int i=0;i<n;i++)
     {
